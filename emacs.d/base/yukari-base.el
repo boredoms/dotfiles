@@ -1,0 +1,3 @@
+
+
+(provide 'yukari-base)
