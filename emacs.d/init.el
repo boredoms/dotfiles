@@ -53,7 +53,11 @@
 
 ;; module stuff goes here
 (require 'yukari-evil)
+(require 'yukari-company)
+(require 'yukari-flycheck)
 ;; test
+
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

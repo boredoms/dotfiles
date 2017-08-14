@@ -1,0 +1,9 @@
+*~
+*.elc
+auto-save-list
+backup
+backups
+elpa
+eshell
+places
+recentf
