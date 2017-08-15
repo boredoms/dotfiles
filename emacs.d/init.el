@@ -7,6 +7,7 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 ;;(package-initialize)
+;;; Code:
 
 (when (version< emacs-version "24.4")
   (error "This config requires at least Emacs 24.4 to work"))
@@ -19,15 +20,15 @@
 
 ;; setting up base directory
 (defvar yukari-root-dir (file-name-directory load-file-name)
-  "The directory of this init.el file")
+  "The directory of this init.el file.")
 (defvar yukari-base-dir (expand-file-name "base" yukari-root-dir)
-  "Directory containing the base of this config")
+  "Directory containing the base of this config.")
 (defvar yukari-user-dir (expand-file-name "user" yukari-root-dir)
-  "Directory containing any user customization")
+  "Directory containing any user customization.")
 (defvar yukari-modules-dir (expand-file-name "modules" yukari-root-dir)
-  "Directory containing modular customization")
+  "Directory containing modular customization.")
 (defvar yukari-backup-dir (expand-file-name "backup" yukari-root-dir)
-  "Directory containing automatically generated backups of edited files")
+  "Directory containing automatically generated backups of edited files.")
 
 ;; add these folders to the load path
 (add-to-list 'load-path yukari-base-dir)
