@@ -11,7 +11,7 @@
           company-dabbrev-code-ignore-case nil
           company-dabbrev-code-other-buffers t
           company-tooltip-align-annotations t
-;          company-global-modes '(not eshell-mode erc-mode message-mode help-mode)
+          company-global-modes '(not eshell-mode erc-mode message-mode help-mode)
           company-frontends '(company-pseudo-tooltip-frontend company-echo-metadata-frontend)
           company-backends '(company-capf company-dabbrev company-ispell)
           company-transformers '(company-sort-by-occurrence))
@@ -23,8 +23,8 @@
               ("C-h" . company-quickhelp-manual-begin))
   :config
   (progn
+    (require 'company)
     (setq company-quickhelp-delay nil)
     (company-quickhelp-mode 1)))
-
 
 (provide 'yukari-company)
