@@ -58,6 +58,7 @@
 (require 'yukari-flycheck)
 
 (require 'yukari-elisp)
+(require 'yukari-latex)
 ;; test
 
 
@@ -69,7 +70,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (slime highlight-quoted elisp-mode evil guide-key undo-tree use-package smart-mode-line miniedit exec-path-from-shell auto-compile))))
+    (company-auctex auctex slime highlight-quoted elisp-mode evil guide-key undo-tree use-package smart-mode-line miniedit exec-path-from-shell auto-compile))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
