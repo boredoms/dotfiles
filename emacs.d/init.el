@@ -70,10 +70,10 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (company-auctex auctex slime highlight-quoted elisp-mode evil guide-key undo-tree use-package smart-mode-line miniedit exec-path-from-shell auto-compile))))
+    (haskell-mode company-auctex auctex slime highlight-quoted elisp-mode evil guide-key undo-tree use-package smart-mode-line miniedit exec-path-from-shell auto-compile))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:foreground "#cccccc" :background "#202020")))))
