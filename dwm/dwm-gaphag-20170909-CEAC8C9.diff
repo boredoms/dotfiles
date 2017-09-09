@@ -1,0 +1,45 @@
+diff --git a/dwm.c b/dwm.c
+index a5ce993..93b5102 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -1675,7 +1675,7 @@ tagmon(const Arg *arg)
+ void
+ tile(Monitor *m)
+ {
+-	unsigned int i, n, h, mw, my, ty;
++	unsigned int i, n, h, mw, mh, my, ty;
+ 	Client *c;
+ 
+ 	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
+@@ -1683,18 +1683,22 @@ tile(Monitor *m)
+ 		return;
+ 
+ 	if (n > m->nmaster)
+-		mw = m->nmaster ? m->ww * m->mfact : 0;
++		mw = m->nmaster ? m->ww * m->mfact - outergap - (gappx / 2) : 0;
+ 	else
+-		mw = m->ww;
+-	for (i = my = ty = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++)
++		mw = m->ww - (2 * outergap);
++
++	mh = m->wh - (2 * outergap);
++
++	for (i = 0, my = ty = outergap, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++)
+ 		if (i < m->nmaster) {
+-			h = (m->wh - my) / (MIN(n, m->nmaster) - i);
+-			resize(c, m->wx, m->wy + my, mw - (2*c->bw), h - (2*c->bw), 0);
+-			my += HEIGHT(c);
++			h = (mh - ((MIN(n, m->nmaster) - 1) * gappx)) / (MIN(n, m->nmaster) - i);
++			
++			resize(c, m->wx + outergap, m->wy + my, mw - (2*c->bw), h - (2*c->bw), 0);
++			my += HEIGHT(c) + gappx;
+ 		} else {
+-			h = (m->wh - ty) / (n - i);
+-			resize(c, m->wx + mw, m->wy + ty, m->ww - mw - (2*c->bw), h - (2*c->bw), 0);
+-			ty += HEIGHT(c);
++			h = (mh - ((n - m->nmaster - 1) * gappx)) / (n - m->nmaster);
++			resize(c, m->wx + mw + outergap + gappx, m->wy + ty, m->ww - mw - (2*c->bw) - (2 * outergap) - gappx, h - (2*c->bw), 0);
++			ty += HEIGHT(c) + gappx;
+ 		}
+ }
+ 
