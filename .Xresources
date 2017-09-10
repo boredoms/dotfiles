@@ -1,0 +1,31 @@
+*color0:     #222222
+*color1:     #ac4142
+*color2:     #6a9fb5
+*color3:     #d28445
+*color4:     #90a959
+*color5:     #aa759f
+*color6:     #75b5aa
+*color7:     #777777
+*color8:     #555555
+*color9:     #8f5536
+*color10:    #a0bfeb
+*color11:    #f4bf75
+*color12:    #aebb7f
+*color13:    #bd9fb4
+*color14:    #9dbbb1
+*color15:    #999999
+
+dzen2.foreground: #999999
+dzen2.background: #222222
+
+URxvt*termName:			rxvt-unicode
+URxvt*scrollTtyKeypress:	true
+URxvt*scrollTtyOutput:		false
+URxvt*scrollWithBuffer:		false
+URxvt*skipScroll:		true
+URxvt*scrollBar:		false
+URxvt*visualBell:		false
+URxvt*background:		#222222
+URxvt*foreground:		#999999
+URxvt*font:			-lucy-tewi-medium-*-*-*-11-*-*-*-*-*-*-*
+
