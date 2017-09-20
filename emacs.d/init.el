@@ -59,6 +59,7 @@
 
 (require 'yukari-elisp)
 (require 'yukari-latex)
+(require 'yukari-haskell)
 ;; test
 
 

@@ -1,1 +1,7 @@
-(use-package haskell-mode)
+(use-package haskell-mode
+  :defer t)
+
+
+
+(provide 'yukari-haskell)
+
