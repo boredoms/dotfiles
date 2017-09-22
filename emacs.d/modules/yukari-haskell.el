@@ -1,7 +1,7 @@
 (use-package haskell-mode
   :defer t
-  :mode (("\\.hs\\" . haskell-mode)
-         ("\\.cabal\\" . haskell-cabal-mode))
+  :mode (("\\.hs$" . haskell-mode)
+         ("\\.cabal$" . haskell-cabal-mode))
   :interpreter (("runghc" . haskell-mode)
                 ("runhaskell" . haskell-mode)))
 
